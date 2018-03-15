@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 587421529}
   - component: {fileID: 587421528}
   - component: {fileID: 587421534}
-  - component: {fileID: 587421535}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -256,7 +255,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!23 &587421530
 MeshRenderer:
@@ -333,17 +332,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c766ca1707566c6479f9f454be71718c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &587421535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 587421527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71c8fdd892a5574ba0c6510c71ffa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &695728567
@@ -440,7 +428,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4117569219787386, guid: ab20fdff6eac75247a67ec7e550b5cae, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4117569219787386, guid: ab20fdff6eac75247a67ec7e550b5cae, type: 2}
       propertyPath: m_LocalPosition.y
@@ -483,6 +471,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4117569219787386, guid: ab20fdff6eac75247a67ec7e550b5cae, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab20fdff6eac75247a67ec7e550b5cae, type: 2}
   m_IsPrefabParent: 0
@@ -513,12 +505,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd9545396304ed47afa609ee36e22fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjects:
-  - {fileID: 1603448828801004, guid: ab20fdff6eac75247a67ec7e550b5cae, type: 2}
   player: {fileID: 587421527}
+  gameObjectsOnMap:
+  - {fileID: 1603448828801004, guid: ab20fdff6eac75247a67ec7e550b5cae, type: 2}
+  gameObjectXScale: 2
   plane: {fileID: 1109083182042234, guid: ffe0d1afbb5f42547a36a2872f65850b, type: 2}
-  shift: {x: 0, y: 0, z: 200}
-  ObstaclesOnMap: []
+  lengthZScale: 20
+  linesOnPlane: 5
+  HedgesOnMap: []
   planes: []
 --- !u!4 &834414963
 Transform:
